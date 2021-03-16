@@ -24,13 +24,13 @@ body {
 
 .refreshBtn
 {
-	padding: 10px 30px;
+	padding: 3px 30px;
 	font-size: 2rem;
 	cursor: pointer;
 	background: transparent;
 	outline: none;
 	border: 2px solid #fff;
-	border-radius: 30px;
+	border-radius: 100px;
 	transition: all 0.5s;
 }
 
