@@ -47,7 +47,7 @@ const generateText = () => {
 	for (let i = 0; i < color.length; i++) {
 		let randomColor = generateColor();
 		color[i].innerText = randomColor;
-		color[i].style.backgroundColor = "#031323";
+		color[i].style.backgroundColor = "rgba(255,255,255,0.1)";
 		color[i].style.color = randomColor;
 		clipBoard[i].value = randomColor;
 		clipBoard[i].style.color = "#fff";
