@@ -20,10 +20,16 @@ body {
 .refresh
 {
 	margin: 15px 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 .refreshBtn
 {
+	text-align: center;
+	text-decoration: none;
 	padding: 3px 30px;
 	font-size: 2rem;
 	cursor: pointer;
@@ -32,6 +38,7 @@ body {
 	border: 2px solid #fff;
 	border-radius: 100px;
 	transition: all 0.5s;
+	margin: 10px;
 }
 
 .refreshBtn:hover

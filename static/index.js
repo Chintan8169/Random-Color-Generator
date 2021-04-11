@@ -27,16 +27,31 @@ color.forEach(e => {
 		});
 	});
 })
-const generate = () => {
+
+const generateBack = () => {
 	let color = document.querySelectorAll(".color");
 	let clipBoard = document.querySelectorAll(".clipBoard");
 	for (let i = 0; i < color.length; i++) {
 		let randomColor = generateColor();
 		color[i].innerText = randomColor;
 		color[i].style.backgroundColor = randomColor;
+		color[i].style.color = "#fff";
 		clipBoard[i].value = randomColor;
+		clipBoard[i].style.color = "#000";
 	};
+}
 
+const generateText = () => {
+	let color = document.querySelectorAll(".color");
+	let clipBoard = document.querySelectorAll(".clipBoard");
+	for (let i = 0; i < color.length; i++) {
+		let randomColor = generateColor();
+		color[i].innerText = randomColor;
+		color[i].style.backgroundColor = "#031323";
+		color[i].style.color = randomColor;
+		clipBoard[i].value = randomColor;
+		clipBoard[i].style.color = "#fff";
+	};
 }
 
 const generateColor = () => {
@@ -49,5 +64,6 @@ const generateColor = () => {
 	}
 	return "#" + color;
 }
-generate();
-document.querySelector(".refreshBtn").addEventListener('click', generate);
+generateBack();
+document.querySelectorAll(".refreshBtn")[0].addEventListener('click', generateBack);
+document.querySelectorAll(".refreshBtn")[1].addEventListener('click', generateText);

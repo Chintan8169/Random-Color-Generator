@@ -13,9 +13,11 @@ app.use(express.static(staticPath));
 
 
 app.get("/", (req, res) => {
-	res.status(200).sendFile("index.html");
+	res.status(200).sendFile(`${staticPath}/index.html`);
 });
 
-
+app.get("*", (req, res) => {
+	res.status(404).send("This Page Couldn't be found.");
+});
 
 app.listen(port);
